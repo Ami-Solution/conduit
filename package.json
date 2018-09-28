@@ -1,6 +1,6 @@
 {
   "name": "0x-relayer-api",
-  "version": "0.1.1",
+  "version": "0.0.1",
   "description": "0x relayer api",
   "main": "dist/index.js",
   "author": "Amis Dex",
@@ -24,7 +24,7 @@
     "cors": "^2.8.4",
     "date-fns": "^1.29.0",
     "dotenv": "^4.0.0",
-    "express": "^4.16.1",
+    "express": "^4.16.3",
     "express-winston": "^2.4.0",
     "express-ws": "^3.0.0",
     "functional-red-black-tree": "^1.0.1",
@@ -61,7 +61,7 @@
     "web3-typescript-typings": "^0.6.2"
   },
   "engines": {
-    "node": ">=8.0.0"
+    "node": "8.x"
   },
   "jest": {
     "transform": {
