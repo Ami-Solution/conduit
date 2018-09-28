@@ -30,7 +30,7 @@ const config: AppConfig = {
     process.env.ZERO_EX_EXCHANGE_SOL_ADDRESS || '0x90fe2af704b34e0224bf2299c838e04d4dcf1364',
   DATA_STORE: process.env.DATA_STORE || 'postgres',
   DATABASE_URL: process.env.DATABASE_URL,
-  PGUSER: process.env.PGUSER || 'johnjohnson',
+  PGUSER: process.env.PGUSER || 'postgres',
   PGHOST: process.env.PGHOST || 'localhost',
   PGPASSWORD: process.env.PGPASSWORD,
   PGDATABASE: 'zeroex',

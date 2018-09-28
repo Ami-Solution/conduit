@@ -61,7 +61,7 @@ const v0ApiRouterFactory = (client: Relay, logger: Logger) => {
     const payload = body as FeeQueryRequest;
     // right now, no fees
     const response: FeeQueryResponse = {
-      feeRecipient: '0x0000000000000000000000000000000000000000',
+      feeRecipient: '0x13cF20B0a6053bA53855e5574AD049323109B0C4',
       makerFee: '0',
       takerFee: '0',
     };

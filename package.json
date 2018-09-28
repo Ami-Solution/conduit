@@ -1,9 +1,9 @@
 {
   "name": "0x-relayer-api",
-  "version": "0.0.1",
+  "version": "0.1.1",
   "description": "0x relayer api",
   "main": "dist/index.js",
-  "author": "john johnson",
+  "author": "Amis Dex",
   "license": "MIT",
   "scripts": {
     "build": "tsc",
@@ -31,8 +31,9 @@
     "helmet": "^3.8.2",
     "immutable-sorted": "^0.1.0",
     "morgan": "^1.9.0",
-    "pg": "^7.3.0",
+    "pg": "^7.4.3",
     "redis": "^2.8.0",
+    "sha3": "^1.2.2",
     "sql-template-strings": "^2.2.2",
     "web3-provider-engine": "^13.3.3",
     "winston": "^2.4.0",
