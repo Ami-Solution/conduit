@@ -5,6 +5,7 @@ addons:
   apt_packages:
     - nodejs
     - npm
+    - yarn
     
 python:
     - 3.7
@@ -15,5 +16,6 @@ script:
     - pip install node
     - pip install docker-compose
     - npm install -g npx
+    - yarn install # yarn start
 #    - npx @0x/launch-kit-wizard && 
 #    - docker-compose up
