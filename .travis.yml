@@ -1,0 +1,19 @@
+dist: xenial
+language: python
+
+addons:
+  apt_packages:
+    - nodejs
+    - npm
+    
+python:
+    - 3.7
+sudo: required
+services:
+    - docker
+script: 
+    - pip install node
+    - pip install docker-compose
+    - npm install -g npx
+#    - npx @0x/launch-kit-wizard && 
+#    - docker-compose up
