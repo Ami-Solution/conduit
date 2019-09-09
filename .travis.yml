@@ -17,7 +17,7 @@ script:
 #    - pip install docker-ce
     - pip install docker-compose
 #    - npm install -g npx
-    - yarn install # yarn start
+    - yarn install ; yarn start
 #    - npx @0x/launch-kit-wizard && 
 #    - docker-compose up
-    - docker-machine -v
+#    - docker-machine -v
