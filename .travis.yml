@@ -14,9 +14,10 @@ services:
     - docker
 script: 
     - pip install node
-    - pip install yarn
+    - pip install docker-ce
     - pip install docker-compose
 #    - npm install -g npx
     - yarn install # yarn start
 #    - npx @0x/launch-kit-wizard && 
 #    - docker-compose up
+    - docker-machine -v
