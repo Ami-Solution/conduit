@@ -14,7 +14,7 @@ services:
     - docker
 script: 
     - pip install node
-    - pip install dotenv
+    - yarn add dotenv
     - pip install docker-compose
 #    - npm install -g npx
     - yarn start
