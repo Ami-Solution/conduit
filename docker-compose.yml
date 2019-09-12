@@ -19,7 +19,7 @@ services:
       PORT: '3001'
       LOG_LEVEL: 'debug'
       REDIS_URL: 'redis://redis:6379'
-      PGUSER: 'postgres'
+      PGUSER: 'root'
       PGPASSWORD: 'password'
       PGDATABASE: 'zeroex'
       PGHOST: 'db'
@@ -32,7 +32,7 @@ services:
     environment:
       PORT: '5432'
       LOG_LEVEL: 'debug'
-      POSTGRES_USER: 'postgres'
+      POSTGRES_USER: 'root'
       POSTGRES_PASSWORD: 'password'
       POSTGRES_DB: 'zeroex'
 
