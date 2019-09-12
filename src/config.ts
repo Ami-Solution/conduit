@@ -32,7 +32,7 @@ const config: AppConfig = {
   DATABASE_URL: process.env.DATABASE_URL,
   PGUSER: process.env.PGUSER || 'postgres',
   PGHOST: process.env.PGHOST || 'localhost',
-  PGPASSWORD: process.env.PGPASSWORD,
+  PGPASSWORD: process.env.PGPASSWORD || 'password',
   PGDATABASE: 'zeroex',
   PGPORT: parseInt(process.env.PGPORT || '', 10) || 5432,
   PG_ORDERS_TABLE_NAME: 'orders',
