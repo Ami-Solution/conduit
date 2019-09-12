@@ -52,7 +52,7 @@ docker-compose --version
 - Test connection to db port and other:
 
 ``` 
-netstat -p tcp | grep $PORT
+netstat -p tcp | grep 5432 6379
 ```
 ``` 
 lsof -nP -iTCP:$PORT | grep LISTEN
@@ -112,16 +112,21 @@ docker-machine -v
 yarn start
 yarn run v1.9.4
 $ node dist/index
-2018-09-25T21:45:42.248Z - info: Conduit starting...
-2018-09-25T21:45:42.262Z - verbose: Connected to Web3 Provider Engine
-2018-09-25T21:45:42.340Z - verbose: ZeroEx client set up
-2018-09-25T21:45:42.348Z - verbose: Redis Publisher setup
-2018-09-25T21:45:42.349Z - verbose: Redis Subscriber setup
-2018-09-25T21:45:42.349Z - debug: Connected to Redis instance
-2018-09-25T21:45:42.391Z - error: Error connecting to Postgres Error: connect ECONNREFUSED 127.0.0.1:5432
-    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1113:14)
-2018-09-25T21:45:42.391Z - error: Error starting app Error: connect ECONNREFUSED 127.0.0.1:5432
-    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1113:14)
+2018-09-12T09:03:49.390Z - info: Conduit starting...
+2018-09-12T09:03:49.421Z - verbose: Connected to Web3 Provider Engine
+2018-09-12T09:03:49.550Z - verbose: ZeroEx client set up
+2018-09-12T09:03:49.562Z - verbose: Redis Publisher setup
+2018-09-12T09:03:49.568Z - verbose: Redis Subscriber setup
+2018-09-12T09:03:49.568Z - debug: Connected to Redis instance
+2018-09-12T09:03:49.744Z - debug: Connected to Postgres database
+2018-09-12T09:03:49.747Z - debug: Connected to Relay client
+2018-09-12T09:03:49.751Z - verbose: OrderWatcher subscribing to ORDER_ADDED message channel
+2018-09-12T09:03:49.754Z - debug: Received a redis subscription request for ORDER_ADDED. Subscribing...
+2018-09-12T09:03:49.759Z - verbose: OrderWatcher subscribed to ORDER_ADDED message channel
+2018-09-12T09:03:49.765Z - verbose: OrderWatcher initialized ZeroEx OrderStateWatcher subscription
+2018-09-12T09:03:49.765Z - debug: Connected to OrderWatcher
+2018-09-12T09:03:49.802Z - error: Error starting app error: relation "orders" does not exist
+
 
 yarn dev
 $ ts-node src/index
@@ -254,4 +259,14 @@ s	"0x0ece49da2b2bb2e9dc36560141132b991cd8bd51cde3728dd91ba929a7ebf6a8"
 3/ GET request to retrieve the token_pairs
 * https://conduit-relay.herokuapp.com/api/v0/token_pairs
 
+## Useful Docker commands
 
+- docker ps -a
+- docker-compose stop # stop your containers, but it won’t remove them
+- docker-compose down # stop your containers, but it also removes the stopped containers as well as any networks that were created 
+- docker image ls
+- docker container ls -a
+- docker container stop b74fcbfc7313
+- docker container rm b74fcbfc7313
+- docker logs pg
+- docker run --name pg -p 5432:5432 -e POSTGRES_PASSWORD=passwrd -e POSTGRES_USER=root -e POSTGRES_DB=zeroex -d postgres
