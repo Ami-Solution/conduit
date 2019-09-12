@@ -17,6 +17,8 @@ script:
     - yarn add dotenv
     - pip install docker-compose
 #    - npm install -g npx
+    - docker container ls -a
+    - docker start --name pg -p 5432:5432 -e POSTGRES_PASSWORD=password -e POSTGRES_USER=root -e POSTGRES_DB=zeroex -d postgres
     - yarn start
 #    - npx @0x/launch-kit-wizard && 
 #    - docker-compose up
