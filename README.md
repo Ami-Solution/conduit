@@ -270,3 +270,4 @@ s	"0x0ece49da2b2bb2e9dc36560141132b991cd8bd51cde3728dd91ba929a7ebf6a8"
 - docker container rm b74fcbfc7313
 - docker logs pg
 - docker run --name pg -p 5432:5432 -e POSTGRES_PASSWORD=passwrd -e POSTGRES_USER=root -e POSTGRES_DB=zeroex -d postgres
+- docker inspect pg
